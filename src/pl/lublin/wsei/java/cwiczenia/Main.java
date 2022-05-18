@@ -7,7 +7,7 @@ public class Main {
     /**komentarz 3*/
     /**
      * javadoc
-     * 
+     * @param args argumenty pobrane z wiersza poleceń
      */
     public static void main(String [] args) {
         //komentarz 1
