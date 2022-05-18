@@ -17,7 +17,7 @@ public class Main {
         komentarz2.2
         komentarz2.3
         */
-
+        System.out.println("Hello Java world\n");
 
 
     }
