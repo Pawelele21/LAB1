@@ -2,6 +2,7 @@ package pl.lublin.wsei.java.cwiczenia;
 
 import java.util.Scanner;
 import java.util.Locale;
+import java.util.Random;
 
 /**komentarz 3*/
 
@@ -120,6 +121,25 @@ public class Main {
         System.out.printf("DEC = %d, BIN = %s, HEX = %s", x, bin, hex);
 
         //-----------------------------------------------------------------------------------------------------------
+
+
+        System.out.println("\n\nGenerowanie 30 losowych liczb całkowitych wraz z wyświetlaniem ich minimum, maksimum i średniej:\n");
+        int[] liczby = new int[30];
+        Random rnd = new Random();
+        for (int i = 0; i < 30; i++) {
+            liczby[i] = rnd.nextInt();
+        }
+        int mx = Integer.MIN_VALUE;
+        int mn = Integer.MAX_VALUE;
+        long avg = 0;
+        for (int l : liczby) {
+            System.out.println(l);
+            if (l < mn) mn = l;
+            if (l > mx) mx = l;
+            avg += l;
+        }
+        System.out.printf("MIN = %d, MAX = %d, AVG = %f", mn, mx, (float) avg / liczby.length);
+
 
     }
 
