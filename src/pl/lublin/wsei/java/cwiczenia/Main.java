@@ -144,7 +144,7 @@ public class Main {
         System.out.printf("MIN = %d, MAX = %d, AVG = %f", mn, mx, (float) avg / liczby.length);
 
         //-----------------------------------------------------------------------------------------------------------
-        System.out.println("\n\n\nWykorzystanie nowo utworzonej klasy Account:\n");
+        System.out.println("\n\n\nWykorzystanie dodatkowej klasy Account:\n");
         Account acc = new Account();
         acc.setName("paweł Zalewski");
         System.out.println(acc.getName());
