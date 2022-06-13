@@ -151,11 +151,11 @@ public class Main {
         System.out.printf("%s%n",Account.capitalize("stanisŁaw maruSARz"));
 
         System.out.println("\nTest metody translit:\n");
-        System.out.println(Account.translit("Поповv"));
-        System.out.println(Account.translit("Волков"));
-        System.out.println(Account.translit("Михайлов"));
-        System.out.println(Account.translit("Алексеев"));
-        System.out.println(Account.translit("Козлов"));
+        System.out.println(Account.translit(" Поповv "));
+        System.out.println(Account.translit(" Волков "));
+        System.out.println(Account.translit(" Михайлов "));
+        System.out.println(Account.translit(" Алексеев "));
+        System.out.println(Account.translit(" Козлов "));
     }
 
     private static String leftPad(String aText, char aChar, int aWidth) {
