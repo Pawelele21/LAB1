@@ -1,5 +1,7 @@
 package pl.lublin.wsei.java.cwiczenia;
 
+import java.util.Scanner;
+
 /**komentarz 3*/
 
 
@@ -18,6 +20,9 @@ public class Main {
         komentarz2.3
         */
         System.out.println("Hello Java world\n");
+
+        //-----------------------------------------------------------------------------------------------------------
+
 
         System.out.println("Metoda print bez znaczników końca linii");
 
@@ -76,6 +81,14 @@ public class Main {
 
         //-----------------------------------------------------------------------------------------------------------
 
+        System.out.println("\nDodawanie liczb wprowadzonych przez użytkownika przy użyciu obiektów klasy Scanner:\n");
+        Scanner input = new Scanner(System.in);
+        int num1, num2;
+        System.out.print("Podaj pierwszą liczbę: ");
+        num1 = input.nextInt();
+        System.out.print("Podaj drugą liczbę: ");
+        num2 = input.nextInt();
+        System.out.printf("Wynik dodawania %d + %d = %d%n", num1, num2, num1 + num2);
     }
 
 }
