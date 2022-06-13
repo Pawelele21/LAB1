@@ -1,6 +1,7 @@
 package pl.lublin.wsei.java.cwiczenia;
 
 import java.util.Scanner;
+import java.util.Locale;
 
 /**komentarz 3*/
 
@@ -9,9 +10,10 @@ public class Main {
     /**komentarz 3*/
     /**
      * javadoc
+     *
      * @param args argumenty pobrane z wiersza poleceń
      */
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         //komentarz 1
 
         /*komentarz2
@@ -50,7 +52,7 @@ public class Main {
         double b = 4.21;
         String s = "jakiś tekst";
 
-        System.out.printf("a = %d, b = %.2f, s= %20s %n", a,b,s);
+        System.out.printf("a = %d, b = %.2f, s= %20s %n", a, b, s);
 
         //-----------------------------------------------------------------------------------------------------------
 
@@ -61,8 +63,8 @@ public class Main {
         System.out.print("\nTabelka funkcji SIN");
 
         System.out.print("\nalfa\tsin(alfa)\n");
-        for (int i = 0; i < 370; i+=10) {
-            System.out.printf("%d\t\t%f\t\n", i, Math.sin(i/360.0*2*Math.PI));
+        for (int i = 0; i < 370; i += 10) {
+            System.out.printf("%d\t\t%f\t\n", i, Math.sin(i / 360.0 * 2 * Math.PI));
         }
         //-----------------------------------------------------------------------------------------------------------
 
@@ -73,7 +75,7 @@ public class Main {
         double log;
 
         do {
-            log = Math.log(arg) /Math.log(2);
+            log = Math.log(arg) / Math.log(2);
             sum += arg;
             System.out.printf("%d\t\t\t%.0f\t\t\t%d\n", arg, log, sum);
             arg *= 2;
@@ -108,11 +110,25 @@ public class Main {
 
         //-----------------------------------------------------------------------------------------------------------
 
+        System.out.println("\nWyświetlanie postaci dwójkowej oraz szesnastkowej:\n");
+        Scanner in = new Scanner(System.in);
+        int x;
+        System.out.print("Podaj liczbę: ");
+        x = in.nextInt();
+        String bin = leftPad(Integer.toBinaryString(x), '0', 8);
+        String hex = leftPad(Integer.toHexString(x).toUpperCase(Locale.ROOT), '0', 4);
+        System.out.printf("DEC = %d, BIN = %s, HEX = %s", x, bin, hex);
 
-
-
-
+        //-----------------------------------------------------------------------------------------------------------
 
     }
 
+    private static String leftPad(String aText, char aChar, int aWidth) {
+        String res = aText;
+        for (int i = 0; i < aWidth - aText.length(); i++) {
+            res = aChar + res;
+        }
+        return res;
+
+    }
 }
