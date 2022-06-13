@@ -92,7 +92,7 @@ public class Main {
 
         //-----------------------------------------------------------------------------------------------------------
 
-        System.out.println("\nDodawanie liczb wprowadzonych przez użytkownika przy użyciu pętli do while");
+        System.out.println("\nDodawanie liczb wprowadzonych przez użytkownika przy użyciu pętli do while ");
         System.out.println("(pętla kończy działanie, kiedy jako którykolwiek z argumentów zostanie podane 0):\n");
         Scanner inp = new Scanner(System.in);
         int n1 = 0, n2 = 0;
